@@ -1,16 +1,17 @@
-package jdbcTesting;
+package data;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.Map;
 
-import jdbcTesting.Table;
+import bdo.Column;
+import bdo.Table;
 
 
 public class MyTest {
 
-	public static void main(String[] args) {
+	public static void wayne(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(" of type ");
 		try {
@@ -52,25 +53,43 @@ public class MyTest {
 		    ResultSet pk; //primary key
 		    ResultSet exportedKeys;
 		    ResultSet importedKeys; //
+		    ArrayList<String> all_types = new ArrayList<String>();
 			for(Table t : userTables) {
+				
 				col = dbMeta.getColumns(null, null,t.getTableName(), null);
 				pk = dbMeta.getPrimaryKeys(null, null, t.tableName);
 				exportedKeys = dbMeta.getExportedKeys(null, null, t.tableName);
 				importedKeys =dbMeta.getImportedKeys(null, null, t.tableName);
+				
 				System.out.println(t.getTableName()+ "\n" + "-------------------");
-				String columnDescriptor;
+				
 				while (col.next()) {
+					Column column = new Column();
+					
+					column.setColName(col.getString("COLUMN_NAME"));
+					column.setColType(col.getString("TYPE_NAME"));
+					
+//					if(!all_types.contains(col.getString("TYPE_NAME"))) {
+//						all_types.add(col.getString("TYPE_NAME"));
+					
+					if(col.getString("IS_NULLABLE").contentEquals("NO")) {
+			    		column.setColNullable(false);
+			    	}else {
+			    		column.setColNullable(true);
+			    	}
+					
+					
+					
 					System.out.print("column " +col.getString("COLUMN_NAME"));
-			    	
-			    	
-			    	
-			    	columnDescriptor =  col.getString("TYPE_NAME");
+					System.out.print(" of type " +col.getString("TYPE_NAME"));
+
 			    	if(col.getString("IS_NULLABLE").contentEquals("NO")) {
-			    		columnDescriptor  = columnDescriptor.concat(" NOT NULL");
+			    		System.out.print(" NOT NULL");
 			    		//System.out.println(columnDescriptor);
 			    	}
-			    	System.out.println(" of type " + columnDescriptor);
-			    	t.addColumn(col.getString("COLUMN_NAME"), columnDescriptor);
+			    	System.out.println("");
+			    	t.addColumn(column);
+			    	
 			    }
 				
 				while(pk.next()) {//must be one result!
@@ -99,6 +118,9 @@ public class MyTest {
 				System.out.println("++++++++++++\n");
 				
 			}
+//			for(String i : all_types) {
+//				System.out.println(i);
+//			}
 		    
 		     
 		    conn.close();

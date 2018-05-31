@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.LoginController">                                       
    <children>
       <VBox layoutX="59.0" layoutY="56.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -39,8 +38,8 @@
             </HBox>
             <ButtonBar prefHeight="77.0" prefWidth="400.0">
               <buttons>
-                  <Button fx:id="Login_CancelButton" mnemonicParsing="false" text="Cancel" />
-                <Button fx:id="Login_OkayButton" mnemonicParsing="false" text="Okay" />
+                  <Button fx:id="Login_CancelButton" mnemonicParsing="false" onAction="#handleCancelButtonAction" text="Cancel" />
+                <Button fx:id="Login_OkayButton" mnemonicParsing="false" onAction="#handleOkayButtonAction" text="Okay" />
               </buttons>
             </ButtonBar>
          </children>
