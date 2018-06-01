@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.TitleSelectionController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="InfoLabel" prefHeight="100.0" prefWidth="679.0" text="Title Migration Table: Select your desired Titles to import" HBox.hgrow="SOMETIMES">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="nextScreen" mnemonicParsing="false" onAction="#handleNextScreenButtonAction" text="Next Constraint Table" />
+               </children>
+            </HBox>
+            <HBox prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="500.0" prefWidth="659.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="ProductionYear">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="von Jahr:">
+                                 <padding>
+                                    <Insets left="5.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fromYearText" />
+                              <Label text="bis Jahr:">
+                                 <padding>
+                                    <Insets left="15.0" right="2.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="toYearText" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <GridPane prefHeight="350.0" prefWidth="382.0" VBox.vgrow="SOMETIMES">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="movieCB" mnemonicParsing="false" text="movie" />
+                         
+                              <CheckBox fx:id="tvSeriesCB" mnemonicParsing="false" text="tv series" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="tvMovieCB" mnemonicParsing="false" text="tv movie" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="videpMovieCB" mnemonicParsing="false" text="video movie" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="tvMiniSeriesCB" mnemonicParsing="false" text="tv mini series" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="videoGamesCB" mnemonicParsing="false" text="video games" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="episodeCB" mnemonicParsing="false" text="epsiode" GridPane.rowIndex="2" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="297.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="rowCountButton" mnemonicParsing="false" onAction="#handleRowCountButtonAction" text="Refresh Row Count">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="rowCountResult" prefHeight="16.0" prefWidth="268.0" text="Selected RowCount Result" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

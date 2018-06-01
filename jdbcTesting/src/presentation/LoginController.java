@@ -45,7 +45,7 @@ public class LoginController implements Initializable{
 		//application call --> data call: postgre validate
 		
 		//if correct
-		
+		app.gotoTitleSelectionScene();
 		//app.gotoNewScene
 
 		

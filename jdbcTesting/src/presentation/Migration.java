@@ -52,8 +52,19 @@ public class Migration extends Application {
 		try {
 			
 			
-			LoginController lc = (LoginController) replaceSceneContent("Login.fxml");
+			LoginController lc = (LoginController) changeScene("Login.fxml", "Loginto Postgre and Oracle");
 			lc.setApplication(this);//injection itself
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void gotoTitleSelectionScene() {
+		try {
+			
+			
+			TitleSelectionController tsc = (TitleSelectionController) changeScene("TitleSelection.fxml", "Select Title Entrys");
+			tsc.setApplication(this);//injection itself
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -61,14 +72,14 @@ public class Migration extends Application {
 	
 	
 	//changes Scene to desired xml String
-	public Initializable replaceSceneContent(String fxml) throws Exception{
+	public Initializable changeScene(String fxml, String windowTitle) throws Exception{
 		FXMLLoader fxmlLoader = new FXMLLoader();
 		Pane p = fxmlLoader.load(getClass().getResource(fxml).openStream());
-		LoginController loginC = (LoginController) fxmlLoader.getController();
+		Initializable loginC = (Initializable) fxmlLoader.getController();
 		
 		Scene newScene = new Scene(p);
 		stage.setScene(newScene);
-		
+		stage.setTitle(windowTitle);
 		return loginC;
 		
 	}
