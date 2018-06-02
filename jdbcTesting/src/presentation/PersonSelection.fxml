@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.PersonSelectionController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="InfoLabel" prefHeight="100.0" prefWidth="679.0" text="Person info miigration table: Select your desired person information to import" HBox.hgrow="SOMETIMES">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="nextScreen" mnemonicParsing="false" onAction="#handleNextScreenButtonAction" text="Next Constraint Table" />
+               </children>
+            </HBox>
+            <HBox prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane prefHeight="500.0" prefWidth="638.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="birthNameCB" mnemonicParsing="false" text="birth name" GridPane.rowIndex="3" />
+                   
+                              <CheckBox fx:id="salaryHistoryCB" mnemonicParsing="false" text="salary history" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="nickNamesCB" mnemonicParsing="false" text="nick names" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="booksCB" mnemonicParsing="false" text="books" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="biographicalMoviesCB" mnemonicParsing="false" text="biographical movies" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="portrayedInCB" mnemonicParsing="false" text="portrayed in" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="whereNowCB" mnemonicParsing="false" text="where now" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="tradeMarkCB" mnemonicParsing="false" text="trade mark" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="interviewCB" mnemonicParsing="false" text="interview" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="articleCB" mnemonicParsing="false" text="article" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="magazinCoverPhotoCb" mnemonicParsing="false" text="magazin cover photo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="pictorialCB" mnemonicParsing="false" text="pictorial" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="deathNotesCB" mnemonicParsing="false" text="death notes" GridPane.rowIndex="7" />
+                        <CheckBox fx:id="quotesCB" mnemonicParsing="false" text="quotes" />
+                        <CheckBox fx:id="triviaCB" mnemonicParsing="false" text="trivia" GridPane.columnIndex="1" />
+                        <CheckBox fx:id="miniBiographyCB" mnemonicParsing="false" text="mini biography" GridPane.columnIndex="2" />
+                        <CheckBox fx:id="birthNotesCB" mnemonicParsing="false" text="birth notes" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="birthDateCB" mnemonicParsing="false" text="birth date" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="deathDateCB" mnemonicParsing="false" text="death date" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="spouseCB" mnemonicParsing="false" text="spouse" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="heightCB" mnemonicParsing="false" text="height" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="otherWorksCB" mnemonicParsing="false" text="other works" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="297.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="rowCountButton" mnemonicParsing="false" onAction="#handleRowCountButtonAction" text="Refresh Row Count">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="rowCountResult" prefHeight="16.0" prefWidth="268.0" text="Selected RowCount Result" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -46,7 +46,7 @@ class TextFieldVerifiers {
 			
 			//now get string
 			String textValue = newInput.getControlNewText();
-			if(textValue.matches("[0-9]+")) {
+			if(textValue.matches("[0-9]+") || textValue.matches("")) {
 				return newInput;
 			}else {
 				return null;

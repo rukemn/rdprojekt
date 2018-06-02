@@ -1,18 +1,13 @@
 package presentation;
 
-import java.net.URL;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.Parent;
+
 
 
 public class Migration extends Application {
@@ -70,6 +65,50 @@ public class Migration extends Application {
 		}
 	}
 	
+	public void gotoCastSelection() {
+		try {
+			
+			
+			CastSelectionController csC = (CastSelectionController) changeScene("CastSelection.fxml", "Select Cast Info");
+			csC.setApplication(this);//injection itself
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void gotoPersonSelection() {
+		try {
+			
+			
+			PersonSelectionController psC = (PersonSelectionController) changeScene("PersonSelection.fxml", "Select Persons Info");
+			psC.setApplication(this);//injection itself
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void gotoMovieInfoSelection() {
+		try {
+			
+			
+			MovieInfoSelectionController misC = (MovieInfoSelectionController) changeScene("MovieInfoSelection.fxml", "Select Movie Info");
+			misC.setApplication(this);//injection itself
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void gotoMovieCompanySelection() {
+		try {
+			
+			
+			MovieCompanySelectionController mcsC = (MovieCompanySelectionController) changeScene("MovieCompanySelection.fxml", "Select MovieCompany Info");
+			mcsC.setApplication(this);//injection itself
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	//changes Scene to desired xml String
 	public Initializable changeScene(String fxml, String windowTitle) throws Exception{
@@ -81,6 +120,7 @@ public class Migration extends Application {
 		stage.setScene(newScene);
 		stage.setTitle(windowTitle);
 		return loginC;
+		
 		
 	}
 	

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.MovieInfoSelectionController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="InfoLabel" prefHeight="100.0" prefWidth="679.0" text="Movie Info table: Select your desired movie information to import" HBox.hgrow="SOMETIMES">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="nextScreen" mnemonicParsing="false" onAction="#handleNextScreenButtonAction" text="Next Constraint Table" />
+               </children>
+            </HBox>
+            <HBox prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane prefHeight="500.0" prefWidth="638.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="crazyCreditsCB" mnemonicParsing="false" text="crazy credits" GridPane.rowIndex="3" />
+                   
+                              <CheckBox fx:id="goofsCB" mnemonicParsing="false" text="goofs" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="quotesCB" mnemonicParsing="false" text="quotes" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="releaseDatesCB" mnemonicParsing="false" text="release dates" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="triviaCB" mnemonicParsing="false" text="trivia" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="locationsCB" mnemonicParsing="false" text="locations" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="interviewsCB" mnemonicParsing="false" text="interviews" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="screenplay_teleplayCB" mnemonicParsing="false" text="screenplay-teleplay" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="novelCB" mnemonicParsing="false" text="novel" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="adaptaionCB" mnemonicParsing="false" text="adaptation" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="bookCB" mnemonicParsing="false" text="book" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="productionProcessProtocolCB" mnemonicParsing="false" text="production process protocol" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <CheckBox fx:id="printedMediaReviews" mnemonicParsing="false" text="printed media reviews" GridPane.rowIndex="7" />
+                        <CheckBox fx:id="runtimesCB" mnemonicParsing="false" text="runtimes" />
+                        <CheckBox fx:id="colorInfoCB" mnemonicParsing="false" text="color info" GridPane.columnIndex="1" />
+                        <CheckBox fx:id="genresCB" mnemonicParsing="false" text="genres" GridPane.columnIndex="2" />
+                        <CheckBox fx:id="languagesCB" mnemonicParsing="false" text="languages" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="certificatesCB" mnemonicParsing="false" text="certificates" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="techInfoCB" mnemonicParsing="false" text="tech info" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="countriesCB" mnemonicParsing="false" text="countries" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="soundMixCB" mnemonicParsing="false" text="sound mix" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="taglinesCB" mnemonicParsing="false" text="taglines" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="essaysCB" mnemonicParsing="false" text="essays" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <CheckBox fx:id="otherLiteatureCB" mnemonicParsing="false" text="other literature" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <CheckBox fx:id="mpaaCB" mnemonicParsing="false" text="mpaa" GridPane.rowIndex="8" />
+                        <CheckBox fx:id="plotCB" mnemonicParsing="false" text="plot" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <CheckBox fx:id="productionDatesCB" mnemonicParsing="false" text="production dates" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <CheckBox fx:id="copyrightHolder" mnemonicParsing="false" text="copyright holder" GridPane.rowIndex="9" />
+                        <CheckBox fx:id="filmingDatesCB" mnemonicParsing="false" text="filming dates" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <CheckBox fx:id="budgetCB" mnemonicParsing="false" text="budget" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <CheckBox fx:id="weekendGrossCB" mnemonicParsing="false" text="weekend gross" GridPane.rowIndex="10" />
+                        <CheckBox fx:id="grossCB" mnemonicParsing="false" text="gross" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <CheckBox fx:id="openingWeekCB" mnemonicParsing="false" text="opening weekend" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <CheckBox fx:id="rentalsCB" mnemonicParsing="false" text="rentals" GridPane.rowIndex="11" />
+                        <CheckBox fx:id="admissionCB" mnemonicParsing="false" text="admission" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <CheckBox fx:id="votesDistributionCB" mnemonicParsing="false" text="votes disttibution" GridPane.rowIndex="12" />
+                        <CheckBox fx:id="votesCB" mnemonicParsing="false" text="votes" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                        <CheckBox fx:id="ratingCB" mnemonicParsing="false" text="rating" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                        <CheckBox fx:id="top250rankCB" mnemonicParsing="false" text="top 250 rank" GridPane.rowIndex="13" />
+                        <CheckBox fx:id="bottom10rankCB" mnemonicParsing="false" text="bottom 10 rank" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="297.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="rowCountButton" mnemonicParsing="false" onAction="#handleRowCountButtonAction" text="Refresh Row Count">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="rowCountInfo" prefHeight="16.0" prefWidth="268.0" text="Selected RowCount Result movie info" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="rowCountInfoIndex" layoutX="16.0" layoutY="156.0" prefHeight="16.0" prefWidth="268.0" text="MovieInfoIndex Row Count here" textAlignment="CENTER">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -9,13 +9,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 
 
 
-public class TitleSelectionController implements Initializable {
 
+public class CastSelectionController implements Initializable {
+	
 	@FXML
 	Label InfoLabel;
 	
@@ -23,28 +22,40 @@ public class TitleSelectionController implements Initializable {
 	Button nextScreen;
 	
 	@FXML
-	TextField fromYearText;
+	CheckBox actorCB;
 	
 	@FXML
-	TextField toYearText;
+	CheckBox actressCB;
 	
 	@FXML
-	CheckBox tvmovieCB;
+	CheckBox producerCB;
 	
 	@FXML
-	CheckBox tvSeriesCB;
+	CheckBox writerCB;
 	
 	@FXML
-	CheckBox videoMovieCB;
+	CheckBox cinematographerCB;
 	
 	@FXML
-	CheckBox tvMiniSeriesCB;
+	CheckBox composerCB;
 	
 	@FXML
-	CheckBox videoGamesCB;
+	CheckBox costumeDesignerCB;
 	
 	@FXML
-	CheckBox episodeCB;
+	CheckBox directorCB;
+	
+	@FXML
+	CheckBox editorCB;
+	
+	@FXML
+	CheckBox miscellaneousCrewCB;
+	
+	@FXML
+	CheckBox productionDesignerCB;
+	
+	@FXML
+	CheckBox guestCB;	
 	
 	@FXML
 	Button rowCountButton;
@@ -56,15 +67,13 @@ public class TitleSelectionController implements Initializable {
 	
 	@FXML
 	private void handleNextScreenButtonAction(ActionEvent event) {
-		InfoLabel.setText("button action recieved: result");
-		// now write into BDO table filter
-		app.gotoCastSelection();
+		InfoLabel.setText("button action Cast selection recieved: result");
+		app.gotoPersonSelection();
 	}
 	
 	@FXML
 	private void handleRowCountButtonAction(ActionEvent event) {
 		rowCountResult.setText("testing rowcount");
-
 	}
 	public void setApplication(Migration appl) {
 		this.app = appl;
@@ -73,11 +82,6 @@ public class TitleSelectionController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		TextFormatter<String> fromYearIntVer = TextFieldVerifiers.IntegerValidater();
-		fromYearText.setTextFormatter(fromYearIntVer);
-		
-		TextFormatter<String> toYearIntVer = TextFieldVerifiers.IntegerValidater();
-		toYearText.setTextFormatter(toYearIntVer);
 		
 		
 

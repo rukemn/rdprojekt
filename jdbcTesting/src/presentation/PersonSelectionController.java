@@ -9,13 +9,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 
 
 
-public class TitleSelectionController implements Initializable {
+public class PersonSelectionController implements Initializable {
 
+
+	
+	
 	@FXML
 	Label InfoLabel;
 	
@@ -23,28 +24,71 @@ public class TitleSelectionController implements Initializable {
 	Button nextScreen;
 	
 	@FXML
-	TextField fromYearText;
+	CheckBox quotesCB;
 	
 	@FXML
-	TextField toYearText;
+	CheckBox triviaCB;
 	
 	@FXML
-	CheckBox tvmovieCB;
+	CheckBox miniBiographyCB;
 	
 	@FXML
-	CheckBox tvSeriesCB;
+	CheckBox birthNotesCB;
 	
 	@FXML
-	CheckBox videoMovieCB;
+	CheckBox birthDateCB;
 	
 	@FXML
-	CheckBox tvMiniSeriesCB;
+	CheckBox heightCB;
 	
 	@FXML
-	CheckBox videoGamesCB;
+	CheckBox deathDateCB;
 	
 	@FXML
-	CheckBox episodeCB;
+	CheckBox spouseCB;
+	
+	@FXML
+	CheckBox otherWorksCB;
+	
+	@FXML
+	CheckBox birthNameCB;
+	
+	@FXML
+	CheckBox salaryHistoryCB;
+	
+	@FXML
+	CheckBox nickNamesCB;
+	
+	@FXML
+	CheckBox booksCB;
+	
+	@FXML
+	CheckBox biographicalMoviesCB;
+	
+	@FXML
+	CheckBox portrayedInCB;
+	
+	@FXML
+	CheckBox whereNowCB;
+	
+	@FXML
+	CheckBox tradeMarkCB;
+	
+	@FXML
+	CheckBox interviewCB;
+	
+	@FXML
+	CheckBox articleCB;
+	
+	
+	@FXML
+	CheckBox magazinCoverPhotoCB;
+	
+	@FXML
+	CheckBox pictorialCB;
+	
+	@FXML
+	CheckBox deathNotesCB;
 	
 	@FXML
 	Button rowCountButton;
@@ -56,15 +100,13 @@ public class TitleSelectionController implements Initializable {
 	
 	@FXML
 	private void handleNextScreenButtonAction(ActionEvent event) {
-		InfoLabel.setText("button action recieved: result");
-		// now write into BDO table filter
-		app.gotoCastSelection();
+		InfoLabel.setText("button action Person selection recieved: result");
+		app.gotoMovieInfoSelection();
 	}
 	
 	@FXML
 	private void handleRowCountButtonAction(ActionEvent event) {
 		rowCountResult.setText("testing rowcount");
-
 	}
 	public void setApplication(Migration appl) {
 		this.app = appl;
@@ -73,11 +115,6 @@ public class TitleSelectionController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		TextFormatter<String> fromYearIntVer = TextFieldVerifiers.IntegerValidater();
-		fromYearText.setTextFormatter(fromYearIntVer);
-		
-		TextFormatter<String> toYearIntVer = TextFieldVerifiers.IntegerValidater();
-		toYearText.setTextFormatter(toYearIntVer);
 		
 		
 
